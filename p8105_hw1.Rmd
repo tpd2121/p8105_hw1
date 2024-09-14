@@ -10,7 +10,16 @@ knitr::opts_chunk$set(echo = TRUE)
 
 ## Problem 1
 
-```data("penguins", package = "palmerpenguins")
+```{r}
+data("penguins", package = "palmerpenguins")
+```
+
+The dataset contains 344 observations of 3 penguin species on 3 different islands. Aside from the species and island name, the dataset records bill length and depth (in mm), flipper length (in mm), body mass (in gr), sex, and year of observation, totalling in 8 columns and 6 variables. 
+
+The number of columns and rows are
+```{r echo = FALSE}
+nrow(penguins)
+ncol(penguins)
 ```
 
 ## Including Plots
