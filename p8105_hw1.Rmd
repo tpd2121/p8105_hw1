@@ -5,6 +5,7 @@ date: "2024-09-13"
 ---
 
 ```{r setup, include=FALSE}
+library(tidyverse)
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
@@ -14,13 +15,26 @@ knitr::opts_chunk$set(echo = TRUE)
 data("penguins", package = "palmerpenguins")
 ```
 
+
 The dataset contains 344 observations of 3 penguin species on 3 different islands. Aside from the species and island name, the dataset records bill length and depth (in mm), flipper length (in mm), body mass (in gr), sex, and year of observation, totalling in 8 columns and 6 variables. 
 
-The number of columns and rows are
+The number of rows and columns, respectively, are
 ```{r echo = FALSE}
 nrow(penguins)
 ncol(penguins)
 ```
+
+The mean flipper length, in mm, is `rmean(flipper_length_mm)`
+```{r mean}
+mean(penguins$flipper_length_mm)
+#can't recognize column "flipper_length_mm"
+```
+
+**Scatterplot** 
+```{r scatterplot}
+ggplot(penguins, aes(x = bill_length_mm, y = flipper_length_mm, color = species)) + geom_point ()
+```
+
 
 ## Including Plots
 
