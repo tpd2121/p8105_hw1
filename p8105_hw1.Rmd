@@ -24,10 +24,10 @@ nrow(penguins)
 ncol(penguins)
 ```
 
-The mean flipper length, in mm, is `rmean(flipper_length_mm)`
-```{r mean}
-mean(penguins$flipper_length_mm)
-#can't recognize column "flipper_length_mm"
+The mean flipper length, in mm, is 
+```{r echo = FALSE}
+p = penguins$flipper_length_mm
+mean(p, na.rm = TRUE)
 ```
 
 **Scatterplot** 
@@ -36,7 +36,7 @@ ggplot(penguins, aes(x = bill_length_mm, y = flipper_length_mm, color = species)
 ```
 
 
-## Including Plots
+## Problem 2
 
 You can also embed plots, for example:
 
